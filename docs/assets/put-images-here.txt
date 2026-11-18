@@ -1,0 +1,1 @@
+Upload images into this folder, then use them in pages with ![description](../assets/filename.png)
