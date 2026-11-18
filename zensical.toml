@@ -7,8 +7,8 @@
 
 # 1) CHANGE THESE THREE LINES ---------------------------------------
 site_name = "DNDAnonymous Wiki"
-site_url  = "https://YOUR-USERNAME.github.io/YOUR-REPO/"
-repo_url  = "https://github.com/YOUR-USERNAME/YOUR-REPO"
+site_url  = "https://sanctuum-22.github.io/DNDA-Wiki/"
+repo_url  = "https://github.com/Sanctuum-22/DNDA-Wiki"
 # -------------------------------------------------------------------
 
 site_description = "Rules, guides and lore for the DNDAnonymous Discord server and the world of Eres."
@@ -134,7 +134,7 @@ toggle.name = "Switch to dark mode"
 # Link to your Discord in the footer — change the invite link
 [[project.extra.social]]
 icon = "fontawesome/brands/discord"
-link = "https://discord.gg/YOUR-INVITE"
+link = "https://discord.gg/UmdAmYVtc"
 name = "Join us on Discord"
 
 # 4) WRITING FEATURES (no need to touch) -----------------------------
