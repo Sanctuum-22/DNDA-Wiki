@@ -15,6 +15,7 @@ site_description = "Rules, guides and lore for the DNDAnonymous Discord server a
 repo_name = "Edit this wiki"
 edit_uri  = "edit/main/docs/"
 copyright = "Made by the DNDAnonymous staff team"
+extra_css = ["assets/stylesheets/dnda.css"]
 
 # 2) THE MENU --------------------------------------------------------
 # Each line is:  { "Name shown in menu" = "file inside the docs folder" }
@@ -95,6 +96,7 @@ nav = [
 # 3) LOOK AND FEEL ---------------------------------------------------
 [project.theme]
 language = "en"
+font = false            # fonts are hosted in docs/assets/fonts instead
 # logo    = "assets/logo.png"      # remove the # and add a logo file to use one
 # favicon = "assets/logo.png"
 features = [
@@ -115,19 +117,22 @@ features = [
   "toc.follow",
 ]
 
-# Colours: try "indigo", "deep purple", "teal", "red", "blue grey" ...
+# Colours are set in docs/assets/stylesheets/dnda.css
 # Dark mode is first so it opens dark, like Discord.
+[project.theme.icon]
+logo = "material/dice-d20"
+
 [[project.theme.palette]]
 scheme  = "slate"
-primary = "indigo"
-accent  = "amber"
+primary = "custom"
+accent  = "custom"
 toggle.icon = "lucide/sun"
 toggle.name = "Switch to light mode"
 
 [[project.theme.palette]]
 scheme  = "default"
-primary = "indigo"
-accent  = "amber"
+primary = "custom"
+accent  = "custom"
 toggle.icon = "lucide/moon"
 toggle.name = "Switch to dark mode"
 

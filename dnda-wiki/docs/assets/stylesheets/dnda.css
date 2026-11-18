@@ -1,0 +1,193 @@
+/* =====================================================================
+   DNDAnonymous wiki theme — "Blood & Gold"
+   Change the colours in the :root block below to restyle the whole site.
+   ===================================================================== */
+
+/* ---------- Fonts (hosted on the site itself, so they load fast) ---------- */
+@font-face { font-family: "Cinzel"; font-weight: 600; font-display: swap;
+  src: url("../fonts/cinzel-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cinzel"; font-weight: 700; font-display: swap;
+  src: url("../fonts/cinzel-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 400; font-display: swap;
+  src: url("../fonts/alegreya-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 400; font-style: italic; font-display: swap;
+  src: url("../fonts/alegreya-sans-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 500; font-display: swap;
+  src: url("../fonts/alegreya-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 700; font-display: swap;
+  src: url("../fonts/alegreya-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Alegreya Sans"; font-weight: 700; font-style: italic; font-display: swap;
+  src: url("../fonts/alegreya-sans-latin-700-italic.woff2") format("woff2"); }
+
+/* ---------- Colours ---------- */
+:root {
+  --dnda-blood:     #9b1c1c;   /* main red */
+  --dnda-blood-hi:  #c42b2b;   /* bright red for hovers */
+  --dnda-gold:      #d4a94e;   /* accent gold */
+  --dnda-gold-soft: #e6cf9a;
+  --dnda-ink:       #0d0a0a;   /* page background (dark mode) */
+  --dnda-panel:     #171111;   /* boxes and cards */
+  --dnda-line:      #3a1d1d;   /* borders */
+  --md-text-font: "Alegreya Sans";
+  --md-text-font-family: "Alegreya Sans", system-ui, sans-serif;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--dnda-ink);
+  --md-default-bg-color--light: #1a1313;
+  --md-default-fg-color: #ece4dc;
+  --md-default-fg-color--light: #c9bdb2;
+  --md-default-fg-color--lighter: #8d7f75;
+  --md-default-fg-color--lightest: #3a2f2c;
+  --md-primary-fg-color: var(--dnda-blood);
+  --md-primary-fg-color--light: var(--dnda-blood-hi);
+  --md-primary-fg-color--dark: #6e1212;
+  --md-primary-bg-color: #fff;
+  --md-accent-fg-color: var(--dnda-gold);
+  --md-accent-fg-color--transparent: rgba(212,169,78,.12);
+  --md-typeset-a-color: var(--dnda-gold);
+  --md-code-bg-color: #1d1515;
+  --md-code-fg-color: #f0dcc0;
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #f6f0e4;          /* parchment */
+  --md-default-fg-color: #2a1d17;
+  --md-primary-fg-color: var(--dnda-blood);
+  --md-primary-fg-color--light: var(--dnda-blood-hi);
+  --md-primary-fg-color--dark: #6e1212;
+  --md-accent-fg-color: #8a5a12;
+  --md-typeset-a-color: #8e1b1b;
+  --md-code-bg-color: #ece2cf;
+  --dnda-panel: #fbf7ee;
+  --dnda-line: #d9c6a3;
+}
+
+/* ---------- Body text ---------- */
+body, input, .md-typeset {
+  font-family: "Alegreya Sans", system-ui, sans-serif;
+}
+.md-typeset { font-size: .9rem; line-height: 1.7; }
+
+/* ---------- Headings: Cinzel with a gold rule ---------- */
+.md-typeset h1, .md-typeset h2, .md-typeset h3,
+.md-header__title, .md-tabs__link, .md-nav__title {
+  font-family: "Cinzel", Georgia, serif;
+  letter-spacing: .03em;
+}
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--dnda-gold);
+  margin-bottom: .6em;
+}
+[data-md-color-scheme="default"] .md-typeset h1 { color: var(--dnda-blood); }
+.md-typeset h2 {
+  font-weight: 700;
+  padding-bottom: .3em;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(90deg, var(--dnda-gold), transparent 70%) 1;
+}
+.md-typeset h3 { font-weight: 600; color: var(--dnda-gold-soft); }
+[data-md-color-scheme="default"] .md-typeset h3 { color: #6e1212; }
+
+/* ---------- Header and tabs ---------- */
+.md-header {
+  background: linear-gradient(180deg, #2a0909 0%, #120606 100%);
+  border-bottom: 1px solid rgba(212,169,78,.35);
+  box-shadow: 0 2px 12px rgba(0,0,0,.5);
+}
+.md-header__title { color: var(--dnda-gold); font-weight: 700; }
+.md-tabs { background: #120606; border-bottom: 1px solid var(--dnda-line); }
+.md-tabs__link { font-size: .72rem; opacity: .8; }
+.md-tabs__link--active, .md-tabs__link:hover { color: var(--dnda-gold) !important; opacity: 1; }
+
+/* ---------- Side menus ---------- */
+.md-nav__link--active, .md-nav__link:hover { color: var(--dnda-gold) !important; }
+[data-md-color-scheme="default"] .md-nav__link--active { color: var(--dnda-blood) !important; }
+
+/* ---------- Links ---------- */
+.md-typeset a { text-decoration-color: rgba(212,169,78,.4); }
+.md-typeset a:hover { color: var(--dnda-blood-hi); }
+
+/* ---------- Tables ---------- */
+.md-typeset table:not([class]) {
+  border: 1px solid var(--dnda-line);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--dnda-panel);
+}
+.md-typeset table:not([class]) th {
+  background: linear-gradient(180deg, #3a0d0d, #240808);
+  color: var(--dnda-gold-soft);
+  font-family: "Cinzel", serif;
+  font-size: .72rem;
+  letter-spacing: .05em;
+}
+[data-md-color-scheme="default"] .md-typeset table:not([class]) th { color: #fff3dc; }
+.md-typeset table:not([class]) tr:hover { background: rgba(155,28,28,.10); }
+
+/* ---------- Coloured boxes ---------- */
+.md-typeset .admonition, .md-typeset details {
+  background: var(--dnda-panel);
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+/* ---------- Card grid on the home page ---------- */
+.md-typeset .grid.cards > ul > li {
+  background: var(--dnda-panel);
+  border: 1px solid var(--dnda-line);
+  border-radius: 8px;
+  transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+  border-color: var(--dnda-gold);
+  box-shadow: 0 6px 18px rgba(155,28,28,.25);
+}
+.md-typeset .grid.cards strong { font-family: "Cinzel", serif; color: var(--dnda-gold); }
+[data-md-color-scheme="default"] .md-typeset .grid.cards strong { color: var(--dnda-blood); }
+.md-typeset .grid.cards hr { border-color: var(--dnda-line); }
+
+/* ---------- Home page banner ---------- */
+.dnda-hero {
+  position: relative;
+  margin: -.6rem 0 2rem;
+  padding: 3.2rem 1.6rem 2.6rem;
+  border-radius: 10px;
+  border: 1px solid rgba(212,169,78,.4);
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(13,10,10,.78) 0%, rgba(13,10,10,.6) 60%, rgba(13,10,10,.9) 100%),
+    url("../eres-banner.webp") center / cover no-repeat;
+}
+.md-typeset .dnda-hero h1 {
+  font-size: clamp(1.2rem, 6.2vw, 2.3rem);
+  white-space: nowrap;
+  margin: 0 0 .3rem;
+  color: var(--dnda-gold);
+  text-shadow: 0 2px 10px #000;
+}
+.dnda-hero p { color: #efe3d3; font-size: 1.05rem; margin: 0 auto; max-width: 34rem; text-shadow: 0 1px 6px #000; }
+.dnda-hero .md-button {
+  margin-top: 1.2rem;
+  font-family: "Cinzel", serif;
+  background: var(--dnda-blood);
+  border-color: var(--dnda-gold);
+  color: #fff;
+}
+.dnda-hero .md-button:hover { background: var(--dnda-blood-hi); color: #fff; }
+
+.dnda-hero .md-button { white-space: nowrap; }
+@media (max-width: 600px) {
+  .dnda-hero { padding: 2.2rem 1rem 2rem; }
+
+  .dnda-hero p { font-size: .95rem; }
+}
+
+/* ---------- Footer ---------- */
+.md-footer, .md-footer-meta { background: #120606; }
+
+/* ---------- Images ---------- */
+.md-typeset img { border-radius: 6px; }

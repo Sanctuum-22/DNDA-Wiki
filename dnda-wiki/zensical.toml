@@ -1,0 +1,168 @@
+# =====================================================================
+#  SITE SETTINGS  —  the only file you need to edit to change the
+#  site name, colours, and menu.  Lines starting with # are notes.
+# =====================================================================
+
+[project]
+
+# 1) CHANGE THESE THREE LINES ---------------------------------------
+site_name = "DNDAnonymous Wiki"
+site_url  = "https://sanctuum-22.github.io/DNDA-Wiki/"
+repo_url  = "https://github.com/Sanctuum-22/DNDA-Wiki"
+# -------------------------------------------------------------------
+
+site_description = "Rules, guides and lore for the DNDAnonymous Discord server and the world of Eres."
+repo_name = "Edit this wiki"
+edit_uri  = "edit/main/docs/"
+copyright = "Made by the DNDAnonymous staff team"
+extra_css = ["assets/stylesheets/dnda.css"]
+
+# 2) THE MENU --------------------------------------------------------
+# Each line is:  { "Name shown in menu" = "file inside the docs folder" }
+# To add a page: create the .md file in docs/, then add a line here.
+nav = [
+  { "Home" = "index.md" },
+  { "Start Here" = [
+      "start/index.md",
+      { "Starting Info for New Players" = "start/new-players.md" },
+      { "Being RP Ready" = "start/rp-ready.md" },
+      { "How We Play: PbP Style" = "start/play-by-post.md" },
+      { "How Async RP Works" = "start/async-rp.md" },
+      { "Always Check the Pins" = "start/check-the-pins.md" },
+  ]},
+  { "Rules" = [
+      "rules/index.md",
+      { "General Conduct" = "rules/general-conduct.md" },
+      { "What's Not Allowed" = "rules/not-allowed.md" },
+      { "Art Commissions & Solicitation" = "rules/art-commissions.md" },
+  ]},
+  { "Eres" = [
+      "world/index.md",
+      { "The Factions & the Unbound" = "world/factions.md" },
+      { "Territories" = "world/cities.md" },
+      { "Neutral Cities" = "world/neutral-cities.md" },
+      { "Unauthorised Entry & Imprisonment" = "world/unauthorised-entry.md" },
+      { "Aggression Toward City Guards" = "world/city-guards.md" },
+      { "Flight Paths" = "world/flight-paths.md" },
+      { "Courier Services" = "world/courier.md" },
+  ]},
+  { "Characters" = [
+      "progression/index.md",
+      { "Character Slot Unlocks" = "progression/character-slots.md" },
+      { "Reputation & Advancement" = "progression/reputation.md" },
+      { "Epic Levelling (21+)" = "progression/epic-levelling.md" },
+      { "Rewards: RP & Quests" = "progression/rewards.md" },
+      { "Training" = "progression/training.md" },
+      { "Resting" = "progression/resting.md" },
+      { "Death and Resurrection" = "progression/death.md" },
+  ]},
+  { "Magic" = [
+      "magic/index.md",
+      { "Magic Items" = "magic/magic-items.md" },
+      { "Learning New Spells" = "magic/wizarding-rules.md" },
+      { "Spellbook Copying" = "magic/spellbook-copying.md" },
+      { "Spell Components" = "magic/spell-components.md" },
+      { "Delerium & Contamination" = "magic/delerium.md" },
+  ]},
+  { "Economy" = [
+      "economy/index.md",
+      { "Shopping in Eres" = "economy/shopping.md" },
+      { "Pawnshop" = "economy/pawnshop.md" },
+      { "Work & Wages" = "economy/work-and-wages.md" },
+      { "Dailies & Weeklies" = "economy/dailies-weeklies.md" },
+      { "Downtime Gathering" = "economy/downtime-gathering.md" },
+      { "Artisan Tools & Crafting" = "economy/crafting.md" },
+      { "Player Housing" = "economy/housing.md" },
+      { "Player-Owned Businesses" = "economy/businesses.md" },
+  ]},
+  { "Activities" = [
+      "activities/index.md",
+      { "Arena (PvP)" = "activities/arena.md" },
+      { "The Gauntlet of Glory" = "activities/gauntlet.md" },
+      { "The Wild Hunt" = "activities/wild-hunt.md" },
+      { "Assignments" = "activities/assignments.md" },
+  ]},
+  { "Commands" = [
+      { "Avrae Cheat Sheet" = "bots/avrae-cheat-sheet.md" },
+      { "DNDA Aliases" = "bots/dnda-aliases.md" },
+  ]},
+  { "Staff" = [
+      { "Meet the Team" = "staff/team.md" },
+      { "How to Edit This Wiki" = "staff/editing.md" },
+      { "Formatting Cheat Sheet" = "staff/formatting.md" },
+  ]},
+]
+
+# 3) LOOK AND FEEL ---------------------------------------------------
+[project.theme]
+language = "en"
+font = false            # fonts are hosted in docs/assets/fonts instead
+# logo    = "assets/logo.png"      # remove the # and add a logo file to use one
+# favicon = "assets/logo.png"
+features = [
+  "announce.dismiss",
+  "content.action.edit",       # pencil button on each page for staff
+  "content.code.copy",         # copy button on commands
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.footer",         # Previous / Next buttons
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.path",           # breadcrumb trail
+  "navigation.sections",
+  "navigation.tabs",           # top-level sections as tabs on desktop
+  "navigation.top",            # "back to top" button
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+# Colours are set in docs/assets/stylesheets/dnda.css
+# Dark mode is first so it opens dark, like Discord.
+[project.theme.icon]
+logo = "material/dice-d20"
+
+[[project.theme.palette]]
+scheme  = "slate"
+primary = "custom"
+accent  = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+scheme  = "default"
+primary = "custom"
+accent  = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to dark mode"
+
+# Link to your Discord in the footer — change the invite link
+[[project.extra.social]]
+icon = "fontawesome/brands/discord"
+link = "https://discord.gg/UmdAmYVtc"
+name = "Join us on Discord"
+
+# 4) WRITING FEATURES (no need to touch) -----------------------------
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.betterem = {}
+pymdownx.caret = {}
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
